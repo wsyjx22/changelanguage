@@ -7,15 +7,16 @@
     tools:context="picooc.com.changelanguage.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        />
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/jingyesi"/>
 
     <Button
-        android:id="@+id/next_btn"
+        android:id="@+id/setting_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"/>
+        android:text="@string/setting"/>
 
 </android.support.constraint.ConstraintLayout>
