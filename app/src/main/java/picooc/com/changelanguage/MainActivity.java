@@ -7,7 +7,7 @@ import android.widget.Button;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-	private Button mSettingBtn;
+	private Button mNextBtn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,15 +17,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 	}
 
 	private void initView() {
-		mSettingBtn = (Button) findViewById(R.id.setting_btn);
-		mSettingBtn.setOnClickListener(this);
+		mNextBtn = (Button) findViewById(R.id.next_btn);
+		mNextBtn.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-			case R.id.setting_btn:
-				startActivity(new Intent(this, SettingActivity.class));
+			case R.id.next_btn:
+				startActivity(new Intent(this, DetailsActivity.class));
 				break;
 		}
 	}

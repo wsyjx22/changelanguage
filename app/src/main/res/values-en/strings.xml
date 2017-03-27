@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="welcome">Hello World!</string>
-    <string name="setting">Setting</string>
+    <string name="next">next</string>
     <string name="jingyesi">The bright moonlight in front of the bed is the frost on the ground. Raising my head, I see the moon so bright; withdrawing my eyes, my nostalgia comes around。</string>
-    <string name="lang">Langguage</string>
 </resources>
