@@ -6,7 +6,9 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.util.Log;
 
 import java.util.Locale;
 import java.util.Observable;
@@ -29,7 +31,12 @@ public class BaseActivity extends AppCompatActivity implements Observer {
 		Resources res = getResources();
 		DisplayMetrics dm = res.getDisplayMetrics();
 		Configuration conf = res.getConfiguration();
-		conf.locale = myLocale;
+		Log.i("TAG", "sta = " + sta + ", local = " + conf.locale.getLanguage());
+		if (TextUtils.equals("auto", sta)) {
+			conf.locale = Locale.getDefault();
+		} else {
+			conf.locale = myLocale;
+		}
 		res.updateConfiguration(conf, dm);
 	}
 
@@ -46,4 +53,5 @@ public class BaseActivity extends AppCompatActivity implements Observer {
 			recreate();
 		}
 	}
+
 }

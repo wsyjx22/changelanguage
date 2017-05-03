@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/lang_key"
+        android:entryValues="@array/lang_value"
+        android:dialogTitle="切换"
+        android:key="list_preference"
+        android:title="多语言环境"/>
+</PreferenceScreen>

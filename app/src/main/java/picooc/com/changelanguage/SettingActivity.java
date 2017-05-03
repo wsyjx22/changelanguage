@@ -27,6 +27,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
 	private void initView() {
 		mLang = (TextView) findViewById(R.id.lang);
 		mLang.setOnClickListener(this);
+		getFragmentManager().beginTransaction().replace(R.id.fragment_content, new PrefsFragement()).commit();
 	}
 
 	@Override
@@ -69,6 +70,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
 	}
 
 	private void go2Main() {
+		// 微信切换语言后是回调主页
+		// 微博切换语音后是重启App
+		// 设计切换语音为系统自动，和自己支持的语音可选
 		Intent intent = new Intent(this, MainActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
